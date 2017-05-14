@@ -5,6 +5,7 @@ namespace Blog.Business
     {
         public MyClass()
         {
+            System.Console.Write("hello");
         }
     }
 }
