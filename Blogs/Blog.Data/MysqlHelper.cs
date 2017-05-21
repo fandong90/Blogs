@@ -26,7 +26,7 @@ namespace Blog.Data
         /// </summary>
         /// <returns>The data set.</returns>
         /// <param name="sqlText">Sql text.</param>
-        protected DataSet ExecuteDataSet(string sqlText)
+        public DataSet ExecuteDataSet(string sqlText)
         {
 
             if (this._mysqlCon.State != ConnectionState.Open)

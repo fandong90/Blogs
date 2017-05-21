@@ -4,7 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Ajax;
-
+using Blog.Business;
+using System.Data;
 namespace Blog.UI.Controllers
 {
     public class HomeController : Controller
@@ -22,6 +23,15 @@ namespace Blog.UI.Controllers
 
         public ActionResult Info()
         {
+            Blog.Business.HomeController.HomeModel hm = new Business.HomeController.HomeModel();
+            var dt = hm.GetTestInfo();
+            string testInfo = string.Empty;
+            foreach(DataRow dr in dt.Rows){
+                testInfo += string.Format(@" id={0}  author={1} content={2} ", dr["ID"].ToString(), dr["AUTHORER"].ToString(), dr["ARTICLE_CONTENT"].ToString());
+
+            }
+            ViewData["test"] = testInfo;
+
             return View();
         }
     }

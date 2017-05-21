@@ -7,7 +7,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Blog.Business</RootNamespace>
     <AssemblyName>Blog.Business</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -28,10 +28,21 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MyClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="HomeController\HomeModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="HomeController\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Blog.Data\Blog.Data.csproj">
+      <Project>{4D851861-5B1F-4E94-8120-84C52739E76C}</Project>
+      <Name>Blog.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
