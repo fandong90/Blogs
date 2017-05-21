@@ -1,11 +1,10 @@
 ﻿using System;
+using System.Web.Optimization;
 namespace Blog.UI.App_Start
 {
-    public class BundleConfig
+    public static class BundleConfig
     {
-        public BundleConfig()
-        {
-           
-        }
+   
+
     }
 }
