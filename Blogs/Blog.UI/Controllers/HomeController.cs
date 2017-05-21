@@ -21,17 +21,26 @@ namespace Blog.UI.Controllers
             return View();
         }
 
-        public ActionResult Info()
+       
+
+        public ActionResult TestView()
         {
-            Blog.Business.HomeController.HomeModel hm = new Business.HomeController.HomeModel();
-            var dt = hm.GetTestInfo();
-            string testInfo = string.Empty;
-            foreach(DataRow dr in dt.Rows){
-                testInfo += string.Format(@" id={0}  author={1} content={2} ", dr["ID"].ToString(), dr["AUTHORER"].ToString(), dr["ARTICLE_CONTENT"].ToString());
+            
+            ViewData["test"] = "test";
+            return View();
+        }
 
-            }
-            ViewData["test"] = testInfo;
+        public ActionResult Testpartion()
+        {
+			Blog.Business.HomeController.HomeModel hm = new Business.HomeController.HomeModel();
+			var dt = hm.GetTestInfo();
+			string testInfo = string.Empty;
+			foreach (DataRow dr in dt.Rows)
+			{
+				testInfo += string.Format(@" id={0}  author={1} content={2} ", dr["ID"].ToString(), dr["AUTHORER"].ToString(), dr["ARTICLE_CONTENT"].ToString());
 
+			}
+            ViewData["test"] =testInfo;
             return View();
         }
     }

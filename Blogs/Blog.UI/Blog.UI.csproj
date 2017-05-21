@@ -99,6 +99,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Models\HomeModel.cs" />
+    <Compile Include="Controllers\BlogShowController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />
@@ -127,7 +128,8 @@
     <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1-vsdoc.js" />
-    <Content Include="Views\Home\Info.cshtml" />
+    <Content Include="Views\Home\TestView.cshtml" />
+    <Content Include="Views\Home\Testpartion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="fonts\glyphicons-halflings-regular.woff2" />

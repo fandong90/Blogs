@@ -4,8 +4,11 @@
 # build
 [Oo]bj/
 [Bb]in/
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b49965c97835104fe9e9d4f8d4bcee99211697c
 # globs
 Makefile.in
 *.DS_Store
